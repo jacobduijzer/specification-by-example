@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace SpecFlowRemoteTesting.Steps;
 
 [Binding]
-public class BookshopBooks
+public class BookshopBooks 
 {
     private readonly BookShopPageObject _bookShopPageObject;
 
@@ -22,6 +22,7 @@ public class BookshopBooks
     public void WhenHeOpensTheBookshopsWebsite()
     {
         _bookShopPageObject.EnsurePageIsOpenAndReady();
+        _bookShopPageObject.TakeScreenshot("WhenHeOpensTheBookshopsWebsite.png");
     }
 
     [When(@"he searches for books about '(.*)'")]
@@ -31,17 +32,19 @@ public class BookshopBooks
         _bookShopPageObject.EnterSearchText(searchString);
         _bookShopPageObject.SubmitSearchText();
     }
-    
+
     [Then(@"he will find no books he can buy")]
     public void ThenHeWillFindNoBooksHeCanBuy()
     {
+        _bookShopPageObject.TakeScreenshot("ThenHeWillFindNoBooksHeCanBuy.png");
         var actualResult = _bookShopPageObject.WaitForNonEmptyResult();
         Assert.Equal("Resultaten (0)", actualResult);
     }
 
     [Then(@"she will find books she can buy")]
     public void ThenSheWillFindBooksSheCanBuy()
-    { 
+    {
+        _bookShopPageObject.TakeScreenshot("ThenSheWillFindBooksSheCanBuy.png");
         var actualResult = _bookShopPageObject.WaitForNonEmptyResult();
         Assert.Matches("Resultaten \\(\\d+\\)", actualResult);
     }

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  uitesting:
+    container_name: ui-testing-demo
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    volumes:
+      - ./output:/app/output
+

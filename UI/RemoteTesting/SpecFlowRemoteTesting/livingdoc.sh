@@ -8,6 +8,6 @@ dotnet test
   feature-folder SpecFlowRemoteTesting \
   -t SpecFlowRemoteTesting/bin/Debug/net7.0/TestExecution.json \
   --binding-assemblies SpecFlowRemoteTesting/bin/Debug/net7.0/SpecFlowRemoteTesting.dll \
-  --output livingdoc.html
+  --output output/livingdoc.html
 
 echo "Generated the report 'livingdoc.html'."

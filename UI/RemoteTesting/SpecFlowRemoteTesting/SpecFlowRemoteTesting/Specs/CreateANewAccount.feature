@@ -1,13 +1,15 @@
 Feature: Creating a new account
-
-    Scenario: Entering an invalid email address 
+    
+    Scenario: Entering an invalid email address
         Given Jacob, a real bookworm, wants to register an account with Bruna
         When he opens the bookshop's website
         And goes to the login page
         And enters the email address 'jacob@somedomain.dev'
         Then he receives an error
-        
+
     Scenario: Registering a new account
+![Registering account](./ThenHeCanEnterTheDetailsOfHisNewAccount.png)
+        
         Given Jacob, a real bookworm, wants to register an account with Bruna
         When he opens the bookshop's website
         And goes to the login page

@@ -124,7 +124,7 @@ namespace SpecFlowRemoteTesting.Specs
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registering a new account", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Registering a new account", "![Registering account](./ThenHeCanEnterTheDetailsOfHisNewAccount.png)", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 10
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -135,19 +135,19 @@ namespace SpecFlowRemoteTesting.Specs
             else
             {
                 this.ScenarioStart();
-#line 11
+#line 13
         testRunner.Given("Jacob, a real bookworm, wants to register an account with Bruna", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
+#line 14
         testRunner.When("he opens the bookshop\'s website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 15
         testRunner.And("goes to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 14
+#line 16
         testRunner.And("enters the email address \'jacob@somedomain.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 17
         testRunner.Then("he can enter the details of his new account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

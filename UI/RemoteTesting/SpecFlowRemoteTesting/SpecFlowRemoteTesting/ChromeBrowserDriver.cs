@@ -27,7 +27,7 @@ public class ChromeBrowserDriver : IDisposable
 
         var chromeOptions = new ChromeOptions();
         if(testSettings.HeadLess)
-            chromeOptions.AddArguments("--headless=new", "--whitelisted-ips", "--no-sandbox", "--incognito");
+            chromeOptions.AddArguments("--headless=new", "--whitelisted-ips", "--no-sandbox", "--incognito", "--disable-dev-shm-usage");
         else
             chromeOptions.AddArguments("--whitelisted-ips", "--no-sandbox", "--incognito");
         

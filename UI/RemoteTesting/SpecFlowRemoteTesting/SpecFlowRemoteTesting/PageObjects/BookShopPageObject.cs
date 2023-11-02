@@ -7,7 +7,6 @@ public class BookShopPageObject : PageObjectBase
 {
     private const string BookshopHomeUrl = "https://www.bruna.nl";
 
-    private IWebElement CookieButton => WebDriver.FindElement(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
     private IWebElement SearchBar => WebDriver.FindElement(By.ClassName("form-search_query"));
     private IWebElement SearchButton => WebDriver.FindElement(By.ClassName("search-icon"));
     private IWebElement ResultText => WebDriver.FindElement(By.ClassName("results-section"));
@@ -22,9 +21,11 @@ public class BookShopPageObject : PageObjectBase
         if (WebDriver.Url == BookshopHomeUrl) return;
         
         WebDriver.Url = BookshopHomeUrl;
+        
         try
         {
-            CookieButton.Click();
+            var cookieElement = FindElement(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
+            cookieElement.Click();
         }
         catch (Exception e)
         {

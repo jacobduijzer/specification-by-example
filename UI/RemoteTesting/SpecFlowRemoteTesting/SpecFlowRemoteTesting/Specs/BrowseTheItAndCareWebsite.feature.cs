@@ -19,7 +19,7 @@ namespace SpecFlowRemoteTesting.Specs
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class BookshopBooksFeature : object, Xunit.IClassFixture<BookshopBooksFeature.FixtureData>, System.IDisposable
+    public partial class BrowsingTheITCareWebsiteFeature : object, Xunit.IClassFixture<BrowsingTheITCareWebsiteFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace SpecFlowRemoteTesting.Specs
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "BookShopBooks.feature"
+#line 1 "BrowseTheItAndCareWebsite.feature"
 #line hidden
         
-        public BookshopBooksFeature(BookshopBooksFeature.FixtureData fixtureData, SpecFlowRemoteTesting_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public BrowsingTheITCareWebsiteFeature(BrowsingTheITCareWebsiteFeature.FixtureData fixtureData, SpecFlowRemoteTesting_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace SpecFlowRemoteTesting.Specs
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Specs", "Bookshop Books", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Specs", "Browsing the IT&Care website", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace SpecFlowRemoteTesting.Specs
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Searching books without result")]
-        [Xunit.TraitAttribute("FeatureTitle", "Bookshop Books")]
-        [Xunit.TraitAttribute("Description", "Searching books without result")]
-        public void SearchingBooksWithoutResult()
+        [Xunit.SkippableFactAttribute(DisplayName="A developer, looking for a job")]
+        [Xunit.TraitAttribute("FeatureTitle", "Browsing the IT&Care website")]
+        [Xunit.TraitAttribute("Description", "A developer, looking for a job")]
+        public void ADeveloperLookingForAJob()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Searching books without result", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A developer, looking for a job", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -99,50 +99,17 @@ namespace SpecFlowRemoteTesting.Specs
             {
                 this.ScenarioStart();
 #line 4
-        testRunner.Given("Jan, a software engineer, wants to buy new books about software development", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("Hans, a C# developer, is looking for a new job", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
-        testRunner.When("he opens the bookshop\'s website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When("he opens the website of IT&Care", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 6
-        testRunner.And("he searches for books about \'software developement\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("he goes to the \'Vacatures\' page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 7
-        testRunner.Then("he will find no books he can buy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Searching books with result")]
-        [Xunit.TraitAttribute("FeatureTitle", "Bookshop Books")]
-        [Xunit.TraitAttribute("Description", "Searching books with result")]
-        public void SearchingBooksWithResult()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Searching books with result", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
-    this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 10
-        testRunner.Given("Kelly, a mother that wants to buy a book for her daughter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 11
-        testRunner.When("she opens the bookshop\'s website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 12
-        testRunner.And("she searches for books about \'the gruffalo\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
-        testRunner.Then("she will find books she can buy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("he will be redirected to the IT&Care page on the \'Werken bij Human Total Care\' we" +
+                        "bsite", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -155,12 +122,12 @@ namespace SpecFlowRemoteTesting.Specs
             
             public FixtureData()
             {
-                BookshopBooksFeature.FeatureSetup();
+                BrowsingTheITCareWebsiteFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                BookshopBooksFeature.FeatureTearDown();
+                BrowsingTheITCareWebsiteFeature.FeatureTearDown();
             }
         }
     }

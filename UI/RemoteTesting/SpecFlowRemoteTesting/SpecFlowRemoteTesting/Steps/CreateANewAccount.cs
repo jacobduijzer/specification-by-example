@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace SpecFlowRemoteTesting.Steps;
 
 [Binding]
-public class CreateANewAccount
+public class CreateANewAccount 
 {
     private readonly LoginPageObject _loginPageObject;
     
@@ -32,12 +32,14 @@ public class CreateANewAccount
     [Then(@"he can enter the details of his new account")]
     public void ThenHeCanEnterTheDetailsOfHisNewAccount()
     {
+        _loginPageObject.TakeScreenshot("ThenHeCanEnterTheDetailsOfHisNewAccount.png");
         Assert.True(_loginPageObject.NewAccountPageIsLoaded());
     }
 
     [Then(@"he receives an error")]
     public void ThenHeReceivesAnError()
     {
+        _loginPageObject.TakeScreenshot("ThenHeReceivesAnError.png");
         Assert.True(_loginPageObject.AccountErrorIsShown());
     }
 } 

@@ -6,7 +6,6 @@ public class LoginPageObject : PageObjectBase
 {
     private const string BookshopHomeUrl = "https://www.bruna.nl/inloggen";
 
-    private IWebElement CookieButton => WebDriver.FindElement(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
     private IWebElement EmailTextBox => WebDriver.FindElement(By.Id("emailRegistration"));
     private IWebElement SubmitButton => WebDriver.FindElement(By.ClassName("bg-buttonPrimaryBackground"));
 
@@ -22,7 +21,8 @@ public class LoginPageObject : PageObjectBase
         WebDriver.Url = BookshopHomeUrl;
         try
         {
-            CookieButton.Click();
+            var cookieElement = FindElement(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll"));
+            cookieElement.Click();
         }
         catch (Exception e)
         {
