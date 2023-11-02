@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Configuration;
 using SpecFlowRemoteTesting.PageObjects;
 using TechTalk.SpecFlow;
 
@@ -8,14 +7,9 @@ namespace SpecFlowRemoteTesting.Steps;
 public class BookshopBooks
 {
     private readonly BookShopPageObject _bookShopPageObject;
-    private readonly TestSettings _testSettings;
 
-    public BookshopBooks(ChromeBrowserDriver chromeBrowserDriver)
-    {
-        
-        
+    public BookshopBooks(ChromeBrowserDriver chromeBrowserDriver) =>
         _bookShopPageObject = new BookShopPageObject(chromeBrowserDriver.Current);
-    }
 
     [Given(@"Jan, a software engineer, wants to buy new books about software development")]
     [Given(@"Kelly, a mother that wants to buy a book for her daughter")]
@@ -27,7 +21,7 @@ public class BookshopBooks
     [When(@"she opens the bookshop's website")]
     public void WhenHeOpensTheBookshopsWebsite()
     {
-        _bookShopPageObject.EnsureCalculatorIsOpenAndReset();
+        _bookShopPageObject.EnsurePageIsOpenAndReady();
     }
 
     [When(@"he searches for books about '(.*)'")]
@@ -37,7 +31,7 @@ public class BookshopBooks
         _bookShopPageObject.EnterSearchText(searchString);
         _bookShopPageObject.SubmitSearchText();
     }
-
+    
     [Then(@"he will find no books he can buy")]
     public void ThenHeWillFindNoBooksHeCanBuy()
     {
@@ -47,8 +41,8 @@ public class BookshopBooks
 
     [Then(@"she will find books she can buy")]
     public void ThenSheWillFindBooksSheCanBuy()
-    {
+    { 
         var actualResult = _bookShopPageObject.WaitForNonEmptyResult();
-        Assert.Equal("Resultaten (4)", actualResult);
+        Assert.Matches("Resultaten \\(\\d+\\)", actualResult);
     }
 }

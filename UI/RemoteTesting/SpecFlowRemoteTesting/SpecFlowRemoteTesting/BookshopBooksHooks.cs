@@ -13,6 +13,6 @@ public class BookshopBooksHooks
     public static void BeforeScenario(ChromeBrowserDriver browserDriver)
     {
         var bookshopPageObject = new BookShopPageObject(browserDriver.Current);
-        bookshopPageObject.EnsureCalculatorIsOpenAndReset();
+        bookshopPageObject.EnsurePageIsOpenAndReady();
     }
 }

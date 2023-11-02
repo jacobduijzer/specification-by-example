@@ -11,3 +11,4 @@ Scenario: Searching books with result
 	When she opens the bookshop's website
 	And she searches for books about 'the gruffalo'
 	Then she will find books she can buy
+	
